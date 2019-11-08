@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/hashicorp/terraform-plugin-sdk/plugin"
-	"terraform-provider-vthunder/vthunder"
+	"github.com/terraform-providers/terraform-provider-vthunder/vthunder"
 )
 
 func main() {
