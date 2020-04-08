@@ -1,9 +1,8 @@
 package main
 
 import (
-	"github.com/terraform-providers/terraform-provider-vthunder/vthunder"
-
 	"github.com/hashicorp/terraform-plugin-sdk/plugin"
+	"github.com/terraform-providers/terraform-provider-vthunder/vthunder"
 )
 
 func main() {
