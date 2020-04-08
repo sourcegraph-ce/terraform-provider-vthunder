@@ -1,7 +1,7 @@
 package main
 
 import (
-	"terraform-provider-vthunder/vthunder"
+	"github.com/terraform-providers/terraform-provider-vthunder/vthunder"
 
 	"github.com/hashicorp/terraform-plugin-sdk/plugin"
 )
