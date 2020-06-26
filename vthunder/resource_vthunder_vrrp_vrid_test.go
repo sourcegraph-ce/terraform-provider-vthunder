@@ -470,9 +470,9 @@ func TestDataToVrrpVrid(t *testing.T) {
 	var s go_vthunder.VridInstance
 
 	var floating_ip go_vthunder.FloatingIP
-	
-	floating_ip.IPAddress = make([]go_vthunder.IPAddressCfg,0,1)
-	
+
+	floating_ip.IPAddress = make([]go_vthunder.IPAddressCfg, 0, 1)
+
 	var blade_parameters go_vthunder.BladeParameters
 	blade_parameters.Priority = 0
 
