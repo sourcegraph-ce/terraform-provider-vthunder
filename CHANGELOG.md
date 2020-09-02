@@ -1,4 +1,8 @@
 ## 0.4.0 (Unreleased)
+FEATURES:
+- Added new 35 reources for firewall module.
+- Bug fixes.
+
 ## 0.3.0 (July 28, 2020)
 
 FEATURES:
