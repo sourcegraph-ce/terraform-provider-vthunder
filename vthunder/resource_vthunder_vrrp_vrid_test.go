@@ -84,7 +84,7 @@ func TestDataToVrrpVrid(t *testing.T) {
 	}
 
 	resourceSchema := map[string]*schema.Schema{
-		"vrid_val": &schema.Schema{
+		"vrid_val": {
 			Type: schema.TypeInt,
 		},
 
