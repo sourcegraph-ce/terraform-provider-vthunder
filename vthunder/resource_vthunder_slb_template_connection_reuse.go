@@ -3,7 +3,7 @@ package vthunder
 //vThunder resource TemplateConnectionReuse
 
 import (
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"util"
 
 	go_vthunder "github.com/go_vthunder/vthunder"

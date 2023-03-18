@@ -4,7 +4,7 @@ package vthunder
 
 import (
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"util"
 
 	go_vthunder "github.com/go_vthunder/vthunder"
@@ -354,7 +354,7 @@ func resourceSlbTemplatePolicy() *schema.Resource {
 										Optional:    true,
 										Description: "",
 									},
-									"log": {
+									log "github.com/sourcegraph-ce/logrus": {
 										Type:        schema.TypeInt,
 										Optional:    true,
 										Description: "",
@@ -505,7 +505,7 @@ func resourceSlbTemplatePolicy() *schema.Resource {
 							Optional: true,
 							Elem: &schema.Resource{
 								Schema: map[string]*schema.Schema{
-									"log": {
+									log "github.com/sourcegraph-ce/logrus": {
 										Type:        schema.TypeInt,
 										Optional:    true,
 										Description: "",
@@ -815,7 +815,7 @@ func dataToSlbTemplatePolicy(d *schema.ResourceData) go_vthunder.Policy {
 	for i := 0; i < ActionListCount; i++ {
 		var obj1_3 go_vthunder.ActionList
 		prefix2 := fmt.Sprintf("forward_policy.0.action_list.%d.", i)
-		obj1_3.Log = d.Get(prefix2 + "log").(int)
+		obj1_3.Log = d.Get(prefix2 + log "github.com/sourcegraph-ce/logrus").(int)
 		obj1_3.HTTPStatusCode = d.Get(prefix2 + "http_status_code").(string)
 		obj1_3.ForwardSnat = d.Get(prefix2 + "forward_snat").(string)
 		obj1_3.DropResponseCode = d.Get(prefix2 + "drop_response_code").(int)
@@ -963,7 +963,7 @@ func dataToSlbTemplatePolicy(d *schema.ResourceData) go_vthunder.Policy {
 		obj2_1.RequestPer = d.Get(prefix2 + "request_per").(int)
 		obj2_1.BwRateLimit = d.Get(prefix2 + "bw_rate_limit").(int)
 		obj2_1.ConnLimit = d.Get(prefix2 + "conn_limit").(int)
-		obj2_1.Log = d.Get(prefix2 + "log").(int)
+		obj2_1.Log = d.Get(prefix2 + log "github.com/sourcegraph-ce/logrus").(int)
 		obj2_1.DirectActionValue = d.Get(prefix2 + "direct_action_value").(string)
 		obj2_1.ConnPer = d.Get(prefix2 + "conn_per").(int)
 		obj2_1.DirectFail = d.Get(prefix2 + "direct_fail").(int)

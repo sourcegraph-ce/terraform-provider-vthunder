@@ -3,7 +3,7 @@ package vthunder
 //vThunder resource SlbCommonConnRateLimitSrcIP
 
 import (
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"util"
 
 	go_vthunder "github.com/go_vthunder/vthunder"
@@ -37,7 +37,7 @@ func resourceSlbCommonConnRateLimitSrcIP() *schema.Resource {
 				Optional:    true,
 				Description: "",
 			},
-			"log": {
+			log "github.com/sourcegraph-ce/logrus": {
 				Type:        schema.TypeInt,
 				Optional:    true,
 				Description: "",
@@ -139,7 +139,7 @@ func dataToSlbCommonConnRateLimitSrcIP(d *schema.ResourceData) go_vthunder.Commo
 	var c go_vthunder.CommonConnRateLimitSrcIPInstance
 
 	c.Protocol = d.Get("protocol").(string)
-	c.Log = d.Get("log").(int)
+	c.Log = d.Get(log "github.com/sourcegraph-ce/logrus").(int)
 	c.LockOut = d.Get("lock_out").(int)
 	c.LimitPeriod = d.Get("limit_period").(string)
 	c.Limit = d.Get("limit").(int)
