@@ -84,7 +84,7 @@ func resourceSlbCommon() *schema.Resource {
 										Optional:    true,
 										Description: "",
 									},
-									"log": {
+									log "github.com/sourcegraph-ce/logrus": {
 										Type:        schema.TypeInt,
 										Optional:    true,
 										Description: "",
@@ -573,7 +573,7 @@ func dataToSlbCommon(d *schema.ResourceData) go_vthunder.SlbCommon {
 		var obj2_1 go_vthunder.SrcIPList
 		prefix3 := fmt.Sprintf(prefix2+"src_ip_list.%d.", i)
 		obj2_1.Protocol = d.Get(prefix3 + "protocol").(string)
-		obj2_1.Log = d.Get(prefix3 + "log").(int)
+		obj2_1.Log = d.Get(prefix3 + log "github.com/sourcegraph-ce/logrus").(int)
 		obj2_1.LockOut = d.Get(prefix3 + "lock_out").(int)
 		obj2_1.LimitPeriod = d.Get(prefix3 + "limit_period").(string)
 		obj2_1.Limit = d.Get(prefix3 + "limit").(int)

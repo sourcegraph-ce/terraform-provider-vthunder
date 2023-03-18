@@ -113,7 +113,7 @@ func resourceFwTemplateLogging() *schema.Resource {
 				Optional:    true,
 				Description: "",
 			},
-			"log": {
+			log "github.com/sourcegraph-ce/logrus": {
 				Type:     schema.TypeList,
 				Optional: true,
 				MaxItems: 1,
