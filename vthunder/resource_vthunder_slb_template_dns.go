@@ -4,7 +4,7 @@ package vthunder
 
 import (
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"util"
 
 	go_vthunder "github.com/go_vthunder/vthunder"
@@ -164,7 +164,7 @@ func resourceTemplateDNS() *schema.Resource {
 										Optional:    true,
 										Description: "",
 									},
-									"log": {
+									log "github.com/sourcegraph-ce/logrus": {
 										Type:        schema.TypeInt,
 										Optional:    true,
 										Description: "",
