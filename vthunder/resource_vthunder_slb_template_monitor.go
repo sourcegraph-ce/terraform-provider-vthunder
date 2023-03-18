@@ -4,7 +4,7 @@ package vthunder
 
 import (
 	"fmt"
-	"log"
+	log "github.com/sourcegraph-ce/logrus"
 	"strconv"
 	"util"
 
